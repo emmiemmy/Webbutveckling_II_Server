@@ -1,0 +1,11 @@
+/* To center the body on templates body*/
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.jumbotron{
+    text-align: center;
+}

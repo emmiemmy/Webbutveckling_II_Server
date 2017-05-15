@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Page is a basic layout for other html templates -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} | Project{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<!-- Navigation bar -->
+<div class="navbar">
+    <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/new">Create new article</a></li>
+        <li><a href="/articles">Fetch all articles and present in list:</a></li>
+    </ul>
+
+
+</div>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+</body>
+</html>

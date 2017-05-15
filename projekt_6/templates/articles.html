@@ -1,0 +1,15 @@
+<!--page renders a list of articles on file -->
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }} {{ super() }}{% endblock %}
+
+{% block content %}
+    <h1>All articles are listed below</h1>
+    <ul>
+        {% for article in articles %}
+            <a href="{{ url_for('get_article', name=article.title)}}">{{ article.title }}</a><br>
+            <hr>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

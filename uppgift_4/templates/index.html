@@ -1,0 +1,21 @@
+<!-- extend basic html layout template -->
+{% extends 'layout.html' %}
+
+<!-- Use title template from layout.html-->
+{% block title %} INDEX | {{ super() }}{% endblock %}
+
+<!-- Use body template from layout.html -->
+{% block content %}
+
+    <header>
+    <h1>Home</h1>
+    </header>
+
+    <img class="pic_of_me" src="{{ url_for('static', filename='img/jag_apa.jpg') }}" alt="bild på mig" >
+
+    <p>Mitt namn är Emma och den här bilden är tagen julen 2015. Jag och
+        min familj har åkt till Gibraltar och hälsat på aporna som lever på
+        den högsta punkten i (det väldigt lilla ) landet.</p>
+
+{% endblock %}
+

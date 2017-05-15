@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block title %}Index | {{ super() }}{% endblock %}
+{% block content %}
+    <h2>Add user</h2>
+
+    <form action="/done" method="POST">
+        <div class="col-md-12" style="background-color: antiquewhite">
+            <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" class="form-control" name="firstNameInput" placeholder="Firstname here">
+            </div>
+
+            <div class="form-group">
+                <label for="lastname">Lastname</label>
+                <input type="text" class="form-control" name="lastNameInput" placeholder="Lastname here">
+            </div>
+
+            <div class="form-group">
+                <label for="socialSecNo">Social Security number</label>
+                <input type="text" class="form-control" name="ssnInput" placeholder="SSN here">
+            </div>
+
+            <div class="form-group">
+                <label for="email">e-mail</label>
+                <input type="text" class="form-control" name="emailInput" placeholder="Email here">
+            </div>
+
+            <div class="form-group">
+                <label for="adress">Adress</label>
+                <input type="text" class="form-control" name="adressInput" placeholder="Adress here">
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Comments</label>
+                <textarea class="form-control" name="commentInput" rows="4" placeholder="Make a comment here"></textarea>
+            </div>
+            <div class="col-md-3 text-center">
+                <button type="submit" class="btn btn-primary">Add user</button>
+            </div>
+
+        </div>
+
+    </form>
+
+
+
+{% endblock %}

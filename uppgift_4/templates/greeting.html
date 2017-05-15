@@ -1,0 +1,13 @@
+<!-- extend template -->
+{% extends "layout.html" %}
+
+<!-- Use title template from layout.html-->
+{% block title %} GREETING | {{ super() }}{% endblock %}
+
+<!-- Use body template from layout.html -->
+{% block content %}
+    <header>
+    <h1>Hello {{ name }}!</h1>
+    </header>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<!-- extend basic html layout template -->
+{% extends 'layout.html' %}
+
+<!-- Use title template from layout.html-->
+{% block title %} MOVIES | {{ super() }}{% endblock %}
+
+<!-- Use body template from layout.html -->
+{% block content %}
+
+    <header>
+    <h1>Movies</h1>
+    </header>
+    <ol>
+    {% for movie in movies %}
+    <li class="movieList">Titel: {{ movie.Title }} <br/>
+        Plot: {{ movie.Plot }}</li>
+
+    {% endfor %}
+    </ol>
+
+
+
+{% endblock %}

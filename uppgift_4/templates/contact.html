@@ -1,0 +1,32 @@
+<!-- extend basic html layout template -->
+{% extends 'layout.html' %}
+
+<!-- Use title template from layout.html-->
+{% block title %} CONTACT | {{ super() }}{% endblock %}
+
+<!-- Use body template from layout.html -->
+{% block content %}
+
+    <header>
+    <h1>Contact us</h1>
+    </header>
+
+    <form action="mailto:emma@wikblad.com" method="post"enctype="text/plain">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" />
+    </div>
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail" />
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </div>
+    <div class="button">
+        <button type="submit">Send your message</button>
+    </div>
+</form>
+
+{% endblock %}

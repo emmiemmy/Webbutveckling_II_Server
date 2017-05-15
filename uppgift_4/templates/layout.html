@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- This file is a layout templatee for other html templates -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{% block title %}Assignment 4{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+
+<body>
+
+<div class="nav_bar">
+    {% block nav %}{% endblock %}
+<nav>
+    <a href="{{ url_for('index')}}"> Home</a>
+    <a href="{{ url_for('contact') }}">Contact</a>
+    <a href="{{ url_for('greeting') }}">Greeting</a>
+    <a href="{{ url_for('movies') }}">Movies</a>
+</nav>
+</div>
+
+<div class="container">
+    {% block content %}{% endblock %}
+</div>
+
+
+</body>
+</html>

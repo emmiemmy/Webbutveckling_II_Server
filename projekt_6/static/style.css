@@ -1,0 +1,91 @@
+body {
+    background: #e2e1dc;
+    color: black;
+}
+
+.container {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+/*      NAVIGATION BAR      */
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    text-align: center;
+    background: #f1f1f1;
+    margin: 4px;
+}
+
+.navbar li a {
+    padding: 8px 16px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+    color: #f1f1f1;
+}
+
+.navbar ul {
+
+}
+
+.container .sourceview {
+    /* To center tha main content, also to see the outline of the container*/
+    background: #f1f1f1;
+    border: solid;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 60%;
+    min-height: 450px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Form */
+.container form {
+    /* To center the form */
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    text-align: left;
+}
+
+label {
+    /* To make sure all labels have the sam size */
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+}
+
+form div + div {
+    /* To give the same size to all fields */
+    width: 300px;
+    padding: 10px;
+}
+
+form textarea, input, button {
+    /* To give the same size to all fields */
+    width: 200px;
+
+}
+
+form button {
+    /* To align button to fields */
+    margin-left: 50px;
+}
+
+form textarea {
+    min-height: 200px;
+}

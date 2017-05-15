@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block title %}PAGE NOT FOUND | {{ super() }}{% endblock %}
+<div class="nav_bar">
+    <nav>
+        <a href="{{ url_for('index') }}"> Home</a>
+    </nav>
+</div>
+{% block content %}
+
+    <h2>{{ errorMessage }}</h2>
+
+{% endblock %}

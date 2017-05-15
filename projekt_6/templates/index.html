@@ -1,0 +1,22 @@
+<!-- start page -->
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }} {{ super() }}{% endblock %}
+
+{% block content %}
+    {% if message %}
+        <h3>{{ message }}</h3>
+    {% else %}
+        <h1>Welcome to Emmas Wiki!</h1>
+    {% endif %}
+    <h3>To fetch all articles in json: go to /api/articles</h3>
+    <h3>To fetch an article with specific title: go to /api/articles/your chosen title</h3>
+    <!-- if new article was submitted -->
+    {% if art_title %}
+        <br>
+        Title: {{ art_title }}<br>
+        Content: {{ text }}<br>
+        Created at: {{ created_at }}
+        <hr>
+    {% endif %}
+{% endblock %}

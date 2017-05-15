@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block title %}Thank's! | {{ super() }}{% endblock %}
+{% block content %}
+    <div class="nav_bar">
+        <nav>
+            <a href="{{ url_for('index') }}"> Home</a>
+        </nav>
+    </div>
+    <h2 style="text-align: center">New user added: </h2>
+
+    <h3>
+        <ul>
+
+            <li>Firstname: {{ user.firstname }}</li>
+            <li>Lastname: {{ user.lastname }}</li>
+            <li>SSN: {{ user.ssn }}</li>
+            <li>E-mail: {{ user.email }}</li>
+            <li>Adress: {{ user.adress }}</li>
+            <li>Comment: {{ user.comment }}</li>
+
+
+        </ul>
+
+
+    </h3>
+{% endblock %}
